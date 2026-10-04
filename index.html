@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>مِخّك — تحدّى أصحابك</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <a class="brand" href="#" onclick="show('home');return false;"><span>مِخّك</span><b>M5K</b></a>
+    <nav>
+      <button onclick="show('home')">الرئيسية</button>
+      <button onclick="show('games')">الألعاب</button>
+      <button onclick="show('leaders')">المتصدرون</button>
+    </nav>
+
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">🎮 لعبة الأسئلة العربية</span>
+          <h1>خلك أذكى من<br><strong>أصحابك.</strong></h1>
+          <p>أسئلة، تحديات، نقاط ومنافسة مباشرة. أنشئ لعبتك وخلّ الحماس يبدأ.</p>
+          <div class="actions">
+            <button class="primary" onclick="show('create')">ابدأ اللعب <span>←</span></button>
+
+          </div>
+          <div class="mini-stats"><span>⚡ سريع</span><span>👥 جماعي</span><span>🧠 ممتع</span></div>
+        </div>
+        <div class="hero-card" onclick="startFriendsSetup()" style="cursor:pointer">
+          <div class="orb">🧠</div>
+          <div class="live">● LIVE</div>
+          <h3>تحدي الأصدقاء</h3>
+          <p>من يعرف أكثر؟</p>
+          <div class="score-row"><b>1,850</b><span>نقطة</span></div>
+          <div class="players"><i>ت</i><i>أ</i><i>م</i><i>+</i></div>
+        </div>
+      </div>
+      <div class="section-title"><div><span>اختر لعبتك</span><h2>تحديات تناسب كل جلسة</h2></div></div>
+      <div class="game-grid">
+<article class="game-card" onclick="startFriendsSetup()"><div class="icon purple">👥</div><h3>تحدي الأصدقاء</h3><p>العبوا معًا بالأدوار على نفس الجهاز.</p><span>ابدأ التحدي ←</span></article>
+<article class="game-card" onclick="chooseMode('quiz')"><div class="icon purple">🧠</div><h3>من يعرف أكثر؟</h3><p>معلومات عامة وفئات متنوعة.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('speed')"><div class="icon blue">⚡</div><h3>تحدي السرعة</h3><p>جاوب بسرعة قبل انتهاء الوقت.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('guess')"><div class="icon pink">🎯</div><h3>خمنها</h3><p>اكتشف الإجابة من التلميحات.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('imageguess')"><div class="icon blue">🖼️</div><h3>خمن الصورة</h3><p>شاهد المنتج بعد إخفاء اسم الشركة واختر العلامة الصحيحة.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('password')"><div class="icon orange">🔐</div><h3>كلمة السر</h3><p>اعرف الكلمة من الوصف.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('tf')"><div class="icon green">؟</div><h3>صح أو خطأ</h3><p>اختبر معلوماتك بسرعة.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('mixed')"><div class="icon purple">🧩</div><h3>أسئلة متنوعة وعشوائية</h3><p>مزيج من جميع الأنماط.</p><span>العب الآن ←</span></article>
+</div>
+    </section>
+
+    <section id="games" class="page">
+      <div class="center-head"><span class="eyebrow">الألعاب</span><h1>اختر تحديك</h1><p>ابدأ جلسة جديدة مع أصحابك.</p></div>
+      <div class="game-grid">
+<article class="game-card" onclick="startFriendsSetup()"><div class="icon purple">👥</div><h3>تحدي الأصدقاء</h3><p>العبوا معًا بالأدوار على نفس الجهاز.</p><span>ابدأ التحدي ←</span></article>
+<article class="game-card" onclick="chooseMode('quiz')"><div class="icon purple">🧠</div><h3>من يعرف أكثر؟</h3><p>معلومات عامة وفئات متنوعة.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('speed')"><div class="icon blue">⚡</div><h3>تحدي السرعة</h3><p>جاوب بسرعة قبل انتهاء الوقت.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('guess')"><div class="icon pink">🎯</div><h3>خمنها</h3><p>اكتشف الإجابة من التلميحات.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('imageguess')"><div class="icon blue">🖼️</div><h3>خمن الصورة</h3><p>شاهد المنتج بعد إخفاء اسم الشركة واختر العلامة الصحيحة.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('password')"><div class="icon orange">🔐</div><h3>كلمة السر</h3><p>اعرف الكلمة من الوصف.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('tf')"><div class="icon green">؟</div><h3>صح أو خطأ</h3><p>اختبر معلوماتك بسرعة.</p><span>العب الآن ←</span></article>
+<article class="game-card" onclick="chooseMode('mixed')"><div class="icon purple">🧩</div><h3>أسئلة متنوعة وعشوائية</h3><p>مزيج من جميع الأنماط.</p><span>العب الآن ←</span></article>
+</div>
+    </section>
+
+    <section id="friendsSetup" class="page">
+      <div class="panel form-panel">
+        <span class="eyebrow">👥 لعب جماعي</span><h1>تحدي الأصدقاء</h1><p>أدخل أسماء اللاعبين، ثم مرروا الجهاز لكل لاعب عند دوره.</p>
+        <label>أسماء اللاعبين (2 إلى 6)<input id="friendNames" placeholder="مثال: توفيق، أحمد، محمد"></label>
+        <label>عدد الأسئلة<select id="friendQCount"><option>10</option><option selected>15</option><option>20</option><option>25</option></select></label>
+        <button class="primary full" onclick="startFriendsGame()">🚀 ابدأ تحدي الأصدقاء</button>
+      </div>
+    </section>
+
+    <section id="create" class="page">
+      <div class="panel form-panel">
+        <span class="eyebrow">جلسة جديدة</span><h1>أنشئ لعبة</h1><p>اضبط الجلسة ثم شارك الكود مع أصحابك.</p>
+        <label>اسم اللاعب<input id="playerName" maxlength="20" placeholder="اكتب اسمك" required></label><label>اسم اللعبة<input id="gameName" value="تحدي الأصدقاء"></label>
+        <label>عدد الأسئلة<select id="qCount"><option>10</option><option selected>15</option><option>20</option><option>25</option></select></label>
+        <label>الفئة<select id="category"><option>منوعات</option><option>رياضة</option><option>تكنولوجيا</option><option>جغرافيا</option><option>تاريخ</option></select></label>
+        <button class="primary full" onclick="startGame()">ابدأ التحدي</button>
+      </div>
+    </section>
+
+
+    <section id="lobby" class="page">
+      <div class="panel lobby">
+        <div class="lobby-code"><span>كود اللعبة</span><b id="gameCode">M5K123</b><button onclick="copyCode()">نسخ</button></div>
+        <h1 id="lobbyTitle">تحدي الأصدقاء</h1><p>شارك الكود مع أصحابك.</p>
+        <div class="player-list"><div class="player"><i>ت</i><span>TOUFIK</span><b>HOST</b></div><div class="player"><i>أ</i><span>صديقك</span><b>جاهز</b></div></div>
+        <button class="primary full" onclick="startGame()">ابدأ اللعبة 🚀</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="page">
+      <div class="quiz-top"><span id="qNumber">السؤال 1 / 10</span><div class="timer"><span id="timer">15</span></div><span>النقاط: <b id="scoreNow">0</b></span><button class="hint-btn" onclick="useNextHint()">🔮 تلميح (1)</button></div>
+      <div class="progress"><i id="progress"></i></div>
+      <div class="quiz-box"><span class="category-tag" id="qCat">منوعات</span><h1 id="questionText">...</h1><div id="answers" class="answers"></div></div>
+      <div id="answerMsg" class="answer-msg"></div>
+    </section>
+
+    <section id="result" class="page">
+<div class="finish">
+<div class="trophy">🏆</div>
+<h1 id="resultTitle">انتهت اللعبة!</h1>
+<p id="resultText"></p>
+<div class="score-big"><span id="resultScore">0</span> نقطة</div>
+<button class="primary big" onclick="playAgain()">🔄 العب مرة أخرى</button>
+<button onclick="show('games')">🎮 اختر لعبة أخرى</button>
+</div>
+</section>
+
+    <section id="leaders" class="page">
+      <div class="center-head"><span class="eyebrow">المتصدرون</span><h1>أفضل اللاعبين 🏆</h1></div>
+      <div class="leaderboard"></div>
+    </section>
+
+
+  </main>
+  <footer><b>مِخّك</b> — العب. نافس. اثبت نفسك. <span>© 2026</span></footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
